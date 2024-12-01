@@ -1,4 +1,4 @@
-  Full Stack Web Application
+Full Stack Web Application
 Full stack development refers to the process of building web applications that include both client-side (front-end) and server-side (back-end) components.
 
 Detailing structure of Application:
@@ -14,9 +14,6 @@ Daemonizing the Services
 Dockerizing the Application
 Creating a Docker Compose File and Running the Application
 Architecture Diagram
-
-![image](https://github.com/user-attachments/assets/6723c1db-378d-471e-a14c-9cb4f2d7c9d1)
-
 Flow Diagram
                       [ User Action ]
                                 |
