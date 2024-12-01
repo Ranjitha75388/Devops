@@ -1,125 +1,74 @@
+Prerequisites Installation (phase-0)
+Following toolset to be installed as the first step (Ubuntu based)
+Java 17
+Maven 3.8.8
+NodeJs 14.x
+MySQL 8.x
+Step1 : Java
+     sudo apt update
+     sudo apt install openjdk-17-jdk openjdk-17-jre
+Step2 : Maven
+     wget https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
+     tar -xvf apache-maven-3.8.8-bin.tar.gz
+     mv apache-maven-3.8.8 /opt/ 
+Maven M2_HOME Setup
+Open vim ~/.profile and add the following and save the file.
 
-
-#  Prerequisites Installation (phase-0)
- ### Following toolset to be installed as the first step (Ubuntu based)
--    Java 17 
--    Maven 3.8.8
--    NodeJs 14.x
--    MySQL 8.x
-
- ### Step1 : Java
-
-   ```
-        sudo apt update
-        sudo apt install openjdk-17-jdk openjdk-17-jre
-   ```
- ### Step2 : Maven 
- 
-   ``` 
-        wget https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
-        tar -xvf apache-maven-3.8.8-bin.tar.gz
-        mv apache-maven-3.8.8 /opt/ 
-```
-
-- ####  Maven M2_HOME Setup
-   
-  Open vim ~/.profile and add the following and save the file.
-
-```
         M2_HOME='/opt/apache-maven-3.8.8'
         PATH="$M2_HOME/bin:$PATH"
         export PATH
-```
-- ####  Install maven
-
-```
+Install maven
         sudo apt install mvn
-```
-
-- #### Verify the version of maven, it should be 3.8.8
-```
+Verify the version of maven, it should be 3.8.8
         mvn -version 
-```    
-### Step3: NodeJs
-
-```
+Step3: NodeJs
         sudo apt update
         curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
         sudo apt -y install nodejs && npm
         node  -v && npm -v
+Step4:MySQL
+Install MySQL Server
+     sudo apt update
+     sudo apt install mysql-server
+Update root user password
+Log in to MySQL as the root user.
 
-```
-### Step4:MySQL
+   sudo mysql     
+Recevie "mysql>"prompt
 
--  #### Install MySQL Server
-
-   ```
-        sudo apt update
-        sudo apt install mysql-server
-
-   ``` 
--  ### Update `root` user password  
-   Log in to MySQL as the root user.
-    
-     ```
-        sudo mysql     
+   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
   
-     ```
-   Recevie "mysql>"prompt
+Replaced password as 'ranjitha'
 
-     ```
-        ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-       
-    ```
-   Replaced password as 'ranjitha'
-     ```  
-        exit
-    
-     ```
-- ### Configure User     
-     ```
-        sudo mysql -u root -p
-     ```
-   Enter Root password 'ranjitha'
+   exit
+Configure User
+   sudo mysql -u root -p
+Enter Root password 'ranjitha'
 
-     ```
-        CREATE USER 'username'@'%' IDENTIFIED WITH mysql_native_password BY 'password'
-     ```
-   Create new user and password as username=’ranjitha’;password=’ranjitha’
+   CREATE USER 'username'@'%' IDENTIFIED WITH mysql_native_password BY 'password'
+Create new user and password as username=’ranjitha’;password=’ranjitha’
 
-     ```
-        GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' WITH GRANT OPTION; 
-     ```
-  Granting privileges enables users to perform actions such as SELECT, INSERT, UPDATE, DELETE, and more on specified database objects.) to other users.
-     ``` 
-        FLUSH PRIVILEGES;
-     ```
-     ```
-        exit
-     ```   
-     ### Step5 : Create Database
+   GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' WITH GRANT OPTION; 
+Granting privileges enables users to perform actions such as SELECT, INSERT, UPDATE, DELETE, and more on specified database objects.) to other users.
 
-     ```
-        sudo mysql -u username -p
-     ```
-   Log into MySQL as a specific user (replace username ‘ranjitha’ ,password 'ranjitha')
+   FLUSH PRIVILEGES;
+   exit
+Step5 : Create Database
+   sudo mysql -u username -p
+Log into MySQL as a specific user (replace username ‘ranjitha’ ,password 'ranjitha')
 
-     ```
-        CREATE DATABASE
-     ```
-  Once logged into the MySQL shell, you can create a new database named as 'mynewdatabase'
-     ```
-        SHOW DATABASES;
-     ```
-  To confirm that the database was created successfully, list all databases.
+   CREATE DATABASE
+Once logged into the MySQL shell, you can create a new database named as 'mynewdatabase'
 
-     ### Check details inside my databases
-         ```
-    
-        mysql -u ranjitha -p
-        SHOW DATABASES;
-        USE
-        SHOW FULL TABLES;
-        SELECT * FROM
-            
-            ```
+   SHOW DATABASES;
+To confirm that the database was created successfully, list all databases.
+
+Check details inside my databases
+   ```
+
+  mysql -u ranjitha -p
+  SHOW DATABASES;
+  USE
+  SHOW FULL TABLES;
+  SELECT * FROM
+      
