@@ -21,7 +21,7 @@ Full stack development refers to the process of building web applications that i
 
 ## Architecture Diagram
 
-
+https://lucid.app/lucidchart/baad1f5f-1568-4597-af59-7a28c831443b/edit?view_items=NzzwBwRoH9A~&invitationId=inv_4bb12a6b-b150-442b-82d9-5a96de130474
     
 
 
