@@ -88,9 +88,18 @@ http://localhost:3000
 
 Now you will receive Employee-list.In that list ,Add-employee details.submit it.and can update details.
 
+![Screenshot from 2024-11-24 19-55-39](https://github.com/user-attachments/assets/7ec34620-af0b-4095-bf67-57dee4327aba)
 
-  
-  
+![image](https://github.com/user-attachments/assets/f2e73d8f-e4c9-41a7-8682-8d7523421f44)
+
+### ERROR
+![Screenshot from 2024-11-26 14-52-24](https://github.com/user-attachments/assets/565030f9-1466-4b8a-a11b-e2d6b2d1c832)
+### Solution
+Check if any other application is running on that port.
+```
+   sudo lsof -i:8080
+   sudo kill -9:PID
+```
 
 
 
