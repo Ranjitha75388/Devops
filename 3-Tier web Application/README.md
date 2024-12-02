@@ -21,7 +21,15 @@ Full stack development refers to the process of building web applications that i
 
 ## Architecture Diagram
 
-[Architecture diagram](https://levelup.gitconnected.com/a-complete-guide-build-a-scalable-3-tier-architecture-with-mern-stack-es6-ca129d7df805)
+        ![image](https://github.com/user-attachments/assets/f06afc74-a4f4-439f-abef-bdf636a297c7)
+
+
+
+
+
+
+
+    
 
 - ### Client (ReactJS Frontend)
 
