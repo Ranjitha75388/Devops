@@ -94,27 +94,21 @@ https://lucid.app/lucidchart/baad1f5f-1568-4597-af59-7a28c831443b/edit?view_item
     - NodeJs 14.x
     - MySQL 8.x
 
-- ### Setup, Build, and Manual Deployment of the Application
+## Setup, Build, and Manual Deployment of the Application
+- Backup- setup,Build and Run the application
+- Frontend- setup ,Build and Run the application
 
-    - Backup- setup,Build and Run the application
+## Daemonizing the Services
+- Create SystemD Service for java backend
+- Daemon Reload & systemctl the Service
+- Create SystemD Service for react frontend
+- Daemon Reload & systemctl the Service
 
-    - Frontend- setup ,Build and Run the application
-
-- ### Daemonizing the Services
-
-    - Create SystemD Service for java backend
-    - Daemon Reload & systemctl the Service
-    - Create SystemD Service for react frontend
-    - Daemon Reload & systemctl the Service
-
-- ### Dockerizing the Application
-
-    - Create a Dockerfile for Frontend
-    - create a Dockerfile for backend
-    - Create a Dockerfile for MySQL
-
-- ### Creating a Docker Compose File
-
-     Create a dockercompose file using above Dockerfile of each service and run the application automatically.
+## Dockerizing the Application
+- Create a Dockerfile for Frontend
+- create a Dockerfile for backend
+    
+## Creating a Docker Compose File
+Create a dockercompose file using above Dockerfile of each service and run the application automatically.
 
 
