@@ -21,7 +21,7 @@ Full stack development refers to the process of building web applications that i
 
 ## Architecture Diagram
 
-![](Aspose.Words.5b74f743-a33b-407e-857e-c5698a7600db.001.png)
+[Architecture diagram](Aspose.Words.5b74f743-a33b-407e-857e-c5698a7600db.001.png)
 
 - ### Client (ReactJS Frontend)
 
