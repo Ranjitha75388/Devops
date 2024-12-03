@@ -33,7 +33,7 @@ This directory contains details of `Database`.Have to update the Databasename, u
 ```
 ```        
         spring.datasource.url=jdbc:mysql://localhost:3306/mynewdatabase?useSSL=false&allowPublicKeyRetrieval=true
-        spring.datasource.username=ranjitha
+        spring.datasource.username=root
         spring.datasource.password=ranjitha
         spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
         spring.jpa.hibernate.ddl-auto = update
@@ -67,6 +67,9 @@ Run the jar file from the target folder.
         java -jar springboot-backend-0.0.1-SNAPSHOT.jar
 ```
 After execution of this command see the status as 'springboot Application started'
+
+![Screenshot from 2024-12-03 16-56-56](https://github.com/user-attachments/assets/1e96f124-d657-481f-8495-e94a345c14b7)
+
 ## Step7 : Frontend Setup
 ```
         cd /home/logi/Downloads/ems-ops-phase-0/react-hooks-frontend
