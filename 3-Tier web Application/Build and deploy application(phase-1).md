@@ -82,6 +82,8 @@ To Get the packages and dependencies ,which will store them under `node_modules`
 ```
 By default the application runs on port `3000` 
 
+![Screenshot from 2024-11-24 20-01-18](https://github.com/user-attachments/assets/a950226d-73ca-4c66-b0f5-c8bb6a50d2ac)
+
 ### Step10 : Accessing App in the Browser
 URL to access the Application
 http://localhost:3000
