@@ -133,3 +133,4 @@ CMD ["java", "-jar", "app.jar"]
 #Run the application without stop
 #CMD ["tail", "-f", "/dev/null"]
 ```
+### Note:MYSQL Dockerfile created directly in docker-compose file.
