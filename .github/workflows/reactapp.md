@@ -106,6 +106,13 @@ jobs:
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-react-app:latest
 ```
 
+Explanation:
+on: push triggers the workflow whenever there is a push to the main branch.
+docker/setup-buildx-action sets up Docker’s buildx tool, which is necessary for building images in GitHub Actions.
+docker/login-action logs in to Docker Hub using the secrets you added earlier.
+docker build builds the Docker image using the Dockerfile.
+docker push pushes the built image to Docker Hub.
+
 git add ../../Dockerfile
 git add .
 git commit -m "Added react yml"
