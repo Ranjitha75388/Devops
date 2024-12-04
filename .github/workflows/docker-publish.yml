@@ -26,7 +26,7 @@ jobs:
           password: ${{ secrets.tharshik123 }}
 
       # Step 4: Build the Docker image
-      - name: Bild the Docker image
+      - name: Build the Docker image
         run: |
           docker build -t ${{ secrets.ranjithalogesh }}/my-react-app:latest .
 
