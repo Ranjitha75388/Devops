@@ -30,6 +30,7 @@ Go to your GitHub repository and navigate to Settings > Secrets and variables > 
 DOCKERHUB_USERNAME: DockerHub username.(ranjithalogesh)
 DOCKERHUB_TOKEN: A personal access token from Docker Hub (You can create this in Docker Hub under Account Settings > Security).
 DOCKERHUB_PASSWORD: Dockerhub password(tharshik123)
+
 # GitHub Action
 
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline.
