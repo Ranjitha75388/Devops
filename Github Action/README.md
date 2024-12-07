@@ -8,7 +8,7 @@ CI covers the build and test stages of the pipeline. Each change in code should 
 ### Continuous Delivery / Deployment (CD)
 The CD part of a CI/CD pipeline refers to Delivery and Deployment (CI/CDD anyone?!). CD takes place after the code successfully passes the testing stage of the pipeline. Continuous delivery refers to the automatic release to a repository after the CI stage. Continuous deployment refers to the automatic deployment of the artifact that has been delivered.
 
-    ![image](https://github.com/user-attachments/assets/f4feca3c-5819-460d-920d-f755a787f57b)
+![image](https://github.com/user-attachments/assets/f4feca3c-5819-460d-920d-f755a787f57b)
 
 
 
