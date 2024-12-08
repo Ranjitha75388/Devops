@@ -19,6 +19,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
+          distribution: 'temurin' # You can also use 'zulu', 'adopt', 'corretto', etc.
           java-version: '17'  # Use the appropriate Java version for your project
 
       - name: Build with Maven
