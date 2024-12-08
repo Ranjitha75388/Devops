@@ -1,0 +1,37 @@
+name: Build and Deploy Spring Boot
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'  # Use the appropriate Java version for your project
+
+      - name: Build with Maven
+        run: mvn clean package --file pom.xml  # Adjust if your pom.xml is located elsewhere
+
+      - name: Build Docker Image
+        run: docker build -f Dockerfile.springboot -t ${{ secrets.DOCKERHUB_USERNAME }}/springboot-backend .
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Push Docker Image to Docker Hub
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/springboot-backend
