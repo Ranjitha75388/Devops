@@ -6,10 +6,10 @@ WORKDIR /app
 
 # Copy the Maven project files
 COPY pom.xml .
-
+COPY src ./src
 
 # Build the application
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Create a new image for running the app
 FROM openjdk:17-jdk-slim
