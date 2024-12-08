@@ -22,9 +22,6 @@ jobs:
           distribution: 'temurin' # You can also use 'zulu', 'adopt', 'corretto', etc.
           java-version: '17'  # Use the appropriate Java version for your project
 
-      - name: Build with Maven
-        run: mvn clean package --file pom.xml  # Adjust if your pom.xml is located elsewhere
-
       - name: Build Docker Image
         run: docker build -f Dockerfile.springboot -t ${{ secrets.DOCKERHUB_USERNAME }}/springboot-backend .
 
