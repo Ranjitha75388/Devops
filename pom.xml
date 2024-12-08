@@ -87,7 +87,7 @@
                         <goal>repackage</goal>
                     </goals>
                     <configuration>
-                        <mainClass>com.example.YourMainClass</mainClass> <!-- Replace with your actual main class -->
+                        <mainClass>SpringbootBackendApplication.java</mainClass> <!-- Replace with your actual main class -->
                     </configuration>
                 </execution>
             </executions>
