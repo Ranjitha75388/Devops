@@ -27,14 +27,12 @@ jobs:
         with:
           maven-version: 3.8.2
 
-      - name: Rename the artifact
-        run: cp target/springboot-backend-0.0.1-SNAPSHOT.jarbackend-social-network-${{ github.sha }}.jar
-
       - name: Build with Maven
         run: mvn clean package
 
       - name: Run Tests
         run: mvn test
+
 
       - name: Build Docker image
         run: |
