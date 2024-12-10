@@ -3,7 +3,7 @@ name: Build and Push Docker frontend Image
 on:
   push:
     branches:
-      - main
+      - feature/github-actions
 
 jobs:
   build:
