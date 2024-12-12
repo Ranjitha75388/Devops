@@ -37,7 +37,7 @@ Step5: touch docker-publish.yml
 Step6: nano docker-publish.yml
 
 ```bash
-name: Build and Push Docker Image
+name: Build and Push Docker Frontend Image
 
 on:
   push:
@@ -53,26 +53,40 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Docker
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '14'  # Specify the Node.js version you want to use
 
-      # Step 3: Log in to Docker Hub
+      # Step 3: Install Dependencies
+      - name: Install Dependencies
+        run: |
+          cd react-hooks-frontend
+          npm install
+
+      # Optional: List files to verify contents (for debugging)
+      - name: List the files
+        run: |
+          cd react-hooks-frontend
+          ls
+
+      # Step 4: Log in to Docker Hub
       - name: Log in to Docker Hub
-        uses: docker/login-action@v3
+        uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # Step 4: Build the Docker image
-      - name: Build the Docker image
-        run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/my-react-app:latest .
 
-      # Step 5: Push the Docker image to Docker Hub
-      - name: Push the Docker image
-        run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-react-app:latest
+      # Step 5: Build and push the Docker image using Buildx
+      - name: Build and Push the Docker image
+        uses: docker/build-push-action@v4  # Use the official build-push-action
+        with:
+          context: ./react-hooks-frontend  # Set the context to the directory containing the Dockerfile
+          file: ./react-hooks-frontend/Dockerfile  # Specify the Dockerfile location
+          push: true  # Push the image to Docker Hub after building
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-reactapp:latest
 
 ```
 
